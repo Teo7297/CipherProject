@@ -1,6 +1,5 @@
 package cipherProject;
 
-
 public class Cipher {
 	private int myKey;
 	private char codedAlphabet[];
@@ -20,24 +19,23 @@ public class Cipher {
 
 		for (int j = 0; j < plainText.length(); j++) {
 			codedString = Character.toString(change(plainText.charAt(j), myKey));
-			
+
 			codedText += codedString;
 		}
 		return codedText;
 	}
-	
-	//metodo change usato da Encode per sostituire i caratteri
+
+	// metodo change usato da Encode per sostituire i caratteri
 	private char change(char token, int key) {
-		
+
 		char shiftedToken;
 		shiftedToken = ' ';
-		
+
 		for (int i = 0; i < codedAlphabet.length; i++) {
 			if (codedAlphabet[i] == token) {
 
-				
-				shiftedToken = codedAlphabet[(i + key)%codedAlphabet.length];
-				
+				shiftedToken = codedAlphabet[(i + key) % codedAlphabet.length];
+
 				break;
 			}
 
