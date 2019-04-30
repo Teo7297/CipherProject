@@ -25,7 +25,7 @@ public class Cipher {
 		return codedText;
 	}
 
-	// metodo change usato da Encode per sostituire i caratteri
+	// metodo change usato da Encode per sostituire i caratteri.
 	private char change(char token, int key) {
 
 		char shiftedToken;
